@@ -1,0 +1,202 @@
+$color_text: #636363;
+$color_title: #fff;
+$color_link: #a83332;
+$color_hover: #f8913d;
+$font-szie: 18px;
+$color: #242424;
+%re-content {
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    display: -webkit-box;
+}
+
+@font-face {
+    font-family: "Roboto Slab";
+    src: url(../font/RobotoSlab-VariableFont_wght.ttf);
+}
+
+.type-28 {
+    font-family: "Roboto Slab";
+    .top-header {
+        background: url("../images/read-book.jpg") no-repeat;
+        width: 100%;
+        height: 100px;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+    }
+    .title {
+        background-color: #333e45;
+        .title-link {
+            text-decoration: none;
+            .title-text {
+                font-size: 25px;
+                padding: 8px 0;
+            }
+        }
+    }
+    .menu {
+        background-color: #ebebeb;
+        .bread {
+            list-style-type: none;
+            .item-bread {
+                display: inline-block;
+                width: 120px;
+                height: 40px;
+                line-height: 40px;
+                .icons {
+                    font-size: 10px;
+                    color: $color_text;
+                }
+                .item {
+                    text-decoration: none;
+                    color: $color_text;
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 14px;
+                    line-height: 26px;
+                    &:hover {
+                        color: #a83332;
+                    }
+                }
+            }
+        }
+    }
+    .page-content {
+        .infor-day {
+            color: #bcbcbc;
+        }
+        .video {
+            padding: 20px 0;
+        }
+        .description {
+            padding: 20px 0;
+            font-weight: 300;
+            line-height: 26px;
+            font-size: $font-szie;
+            color: $color_text;
+        }
+        .content-box {
+            .theme {
+                @extend %re-content;
+                overflow: auto;
+                .theme-boxes {
+                    margin-left: 0 !important;
+                    margin-right: 0 !important;
+                    flex-wrap: wrap;
+                    .theme-box {
+                        flex: 0 0 100%;
+                        max-width: 100%;
+                        position: relative;
+                        width: 100%;
+                        padding-right: 15px;
+                        padding-left: 15px;
+                        margin-bottom: 30px;
+                        .theme-boxicon {
+                            min-height: 46px;
+                            padding-left: 63px;
+                            position: relative;
+                            .theme-boxicon-icon {
+                                background-color: rgba(28, 119, 195, 0.8);
+                                position: absolute;
+                                left: 0;
+                                top: 50%;
+                                margin-top: -23px;
+                                height: 46px;
+                                line-height: 46px;
+                                width: 46px;
+                                text-align: center;
+                                font-size: $font-szie;
+                                color: #fff;
+                                display: block;
+                                transition: all 0.25s ease-in-out;
+                                &:hover {
+                                    background-color: #1c77c3;
+                                }
+                            }
+                            .theme-boxicon-content {
+                                color: $color_text;
+                                font-style: normal;
+                                font-weight: 300;
+                                font-size: 16px;
+                                line-height: 26px;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+            .box-2 {
+                margin-bottom: 40px;
+                color: #fff;
+                position: relative;
+                background-color: $color_hover;
+                .box2-content {
+                    padding-left: 73px !important;
+                    position: relative;
+                    padding: 20px;
+                    min-height: 56px;
+                    .content-icon {
+                        position: absolute;
+                        top: 50%;
+                        left: 13px;
+                        margin-top: -23px;
+                        display: block;
+                        width: 46px;
+                        height: 46px;
+                        line-height: 46px;
+                        text-align: center;
+                        font-size: $font-szie;
+                        color: #fff;
+                        border: solid 1px rgba(255, 255, 255, 0.2);
+                        border-radius: 999px;
+                    }
+                    .content-box2 {
+                        font-size: $font-szie;
+                        font-weight: 300;
+                        line-height: 27px;
+                        .content-link {
+                            color: #fff;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+        .embed {
+            // width: 540px;
+            // height: 315px;
+            width: 100%;
+            height: 315px;
+        }
+    }
+    .module-bottom {
+        margin-top: 20px;
+        background: #f7f7f7;
+        padding: 10px 0;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.18);
+        .pull-left {
+            margin-left: 60px;
+            .module-link {
+                color: $color_text;
+                text-decoration: none !important;
+                color: $color;
+                &:hover {
+                    color: $color_link;
+                }
+            }
+        }
+        .pull-right {
+            margin-left: 130px;
+            .module-link {
+                color: $color_text;
+                text-decoration: none !important;
+                color: $color;
+                &:hover {
+                    color: $color_link;
+                }
+            }
+        }
+    }
+}

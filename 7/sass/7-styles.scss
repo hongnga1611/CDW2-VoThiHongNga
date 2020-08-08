@@ -1,0 +1,184 @@
+$color_text: #a3aaae;
+$color_title: #fff;
+$color_link: #a83332;
+$color-fb: #1c77c3;
+$color-twit: #1da1f2;
+$color-whats: #25d366;
+$color-vk: #45668e;
+
+%re-content {
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    display: -webkit-box;
+}
+@font-face {
+    font-family: "Roboto Slab";
+    src: url(../font/RobotoSlab-VariableFont_wght.ttf);
+}
+.type-7 {
+    font-family: "Roboto Slab";
+    font-size: 18px;
+    background-color: #2b353b;
+    padding-top: 40px;
+    .content {
+        @extend %re-content;
+        color: $color_text;
+    }
+    .no-overflow {
+        @extend %re-content;
+        list-style: none;
+        .link {
+            @extend %re-content;
+            color: $color_text;
+            padding: 5px;
+            text-decoration: none;
+        }
+        a.link:hover,
+        a.link:active {
+            color: $color_link;
+        }
+    }
+    .userfull {
+        @extend %re-content;
+        color: $color_title;
+    }
+    .contact {
+        @extend %re-content;
+        color: $color_title;
+        .contact-content {
+            @extend %re-content;
+            color: $color_text;
+            padding-top: 20px;
+        }
+        .infor {
+            @extend %re-content;
+            list-style: none;
+            color: $color_text;
+            .fas {
+                padding-top: 20px;
+            }
+        }
+    }
+    button {
+        background: #d11515;
+        cursor: pointer;
+        text-decoration: none !important;
+        color: #fff !important;
+        border: 2px solid rgba(51, 51, 51, 0.1);
+        transition: all 0.2s ease;
+        a.button:hover,
+        a.button:active {
+            color: $color_link;
+        }
+    }
+    .copy-right {
+        background-color: #252d32;
+        padding: 15px 0;
+    }
+    .left-end {
+        color: $color_text;
+    }
+    //icon icon
+    @mixin icon_hover($color) {
+        background-color: $color;
+    }
+    %icon-content {
+        transition: all 0.15s ease-in-out;
+        cursor: pointer;
+        border-radius: 3px;
+        background-color: rgba(0, 0, 0, 0.1);
+        color: white;
+    }
+    %after-icon {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        border-radius: 3px;
+        z-index: -1;
+        transition: all 0.15s ease-in-out;
+        top: 0%;
+    }
+    %anima {
+        top: 100%;
+    }
+    %show_item_menu {
+        animation: ani_link;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes ani_link {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    .icon-md-7 {
+        float: right;
+        .header-tools {
+            z-index: 1;
+            .fb-icon {
+                @extend %icon-content;
+                &::after {
+                    @include icon_hover($color-fb);
+                    @extend %after-icon;
+                }
+                &:hover {
+                    color: $color-fb;
+                    &::after {
+                        @extend %anima;
+                    }
+                }
+            }
+            .twit-icon {
+                @extend %icon-content;
+                .icon_pad {
+                    padding: 5px 5px;
+                }
+                &::after {
+                    @include icon_hover($color-twit);
+                    @extend %after-icon;
+                }
+                &:hover {
+                    color: $color-twit;
+                    &::after {
+                        @extend %anima;
+                    }
+                }
+            }
+            .whats-icon {
+                @extend %icon-content;
+                .icon_pad {
+                    padding: 5px 6px;
+                }
+                &::after {
+                    @include icon_hover($color-whats);
+                    @extend %after-icon;
+                }
+                &:hover {
+                    color: $color-whats;
+                    &::after {
+                        @extend %anima;
+                    }
+                }
+            }
+            .vk-icon {
+                @extend %icon-content;
+                &::after {
+                    @include icon_hover($color-vk);
+                    @extend %after-icon;
+                }
+                &:hover {
+                    color: $color-vk;
+                    &::after {
+                        @extend %anima;
+                    }
+                }
+            }
+        }
+    }
+}

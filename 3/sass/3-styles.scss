@@ -1,0 +1,90 @@
+$color_text: #636363;
+$color_title: #c8c8b8;
+$font-color: #a83332;
+@mixin re-content($number) {
+    -webkit-line-clamp: $number;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    display: -webkit-box;
+}
+
+@font-face {
+    font-family: "Roboto Slab";
+    src: url(../font/RobotoSlab-VariableFont_wght.ttf);
+}
+
+.type-3 {
+    background-color: #e5e5e5;
+    font-family: "Roboto Slab";
+    .triangle {
+        position: relative;
+        padding: 20px 10px;
+        margin: 0 0 30px;
+        font-size: 24px;
+        line-height: 29px;
+        font-weight: 400;
+        box-sizing: border-box;
+        background: $color_title;
+        box-shadow: 0px 3px 3px 0 rgba(0, 0, 0, 0.4);
+    }
+    .triangle::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        margin-left: -0.5em;
+        bottom: -2em;
+        left: 50%;
+        box-sizing: border-box;
+        border: 1em solid black;
+        border-color: transparent transparent $color_title $color_title;
+        transform-origin: 0 0;
+        transform: rotate(-45deg);
+        box-shadow: -3px 3px 3px 0 rgba(0, 0, 0, 0.4);
+    }
+    .infor-icon {
+        .icon-description {
+            border-bottom: 2px solid $font-color;
+            width: 150px;
+            margin: 0 auto 20px auto;
+            height: 93px;
+            overflow: hidden;
+            .icon-name {
+                transition: all 0.3s ease;
+                font-size: 3em;
+                margin: 0 auto;
+                left: 18%;
+                padding: 26px 21px;
+                background-color: whitesmoke;
+                border: 5px solid $color_title;
+                border-radius: 50%;
+                bottom: -44px;
+                color: $font-color;
+            }
+        }
+        &:hover {
+            .icon-name {
+                transition: all 0.5s ease;
+                background-color: $font-color;
+                color: white;
+                bottom: -20px;
+            }
+        }
+        .title {
+            font-size: 19px;
+            text-decoration: none;
+            color: black;
+            &:hover {
+                color: $font-color;
+            }
+        }
+        .content-icon {
+            font-weight: 100;
+            text-align: center;
+            line-height: 26px;
+            opacity: 0.9;
+            color: $color_text;
+            @include re-content(4);
+        }
+    }
+}

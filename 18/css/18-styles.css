@@ -1,0 +1,70 @@
+.module-link, .type-18 .title-page, .type-18 .content-page {
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  display: -webkit-box; }
+
+@font-face {
+  font-family: "Roboto Slab";
+  src: url(../font/RobotoSlab-VariableFont_wght.ttf); }
+
+.module-link {
+  text-decoration: none !important; }
+
+.type-18 {
+  color: #212529;
+  font-family: "Roboto Slab"; }
+  .type-18 .menu {
+    background-color: #ebebeb; }
+    .type-18 .menu .bread {
+      list-style-type: none; }
+      .type-18 .menu .bread .item-bread {
+        display: inline-block;
+        width: 120px;
+        height: 40px;
+        line-height: 40px; }
+        .type-18 .menu .bread .item-bread .icons {
+          font-size: 10px;
+          color: #242424; }
+        .type-18 .menu .bread .item-bread .item {
+          text-decoration: none;
+          color: #242424;
+          font-style: normal;
+          font-size: 14px;
+          line-height: 26px; }
+          .type-18 .menu .bread .item-bread .item:hover {
+            color: #a83332; }
+  .type-18 .title-page {
+    margin-bottom: 0px;
+    font-weight: 500;
+    color: #242424;
+    font-size: 37px;
+    line-height: 37px; }
+  .type-18 .content-page {
+    padding: 40px 0;
+    color: #636363; }
+  .type-18 .theme-table-wrap {
+    color: #212529; }
+    .type-18 .theme-table-wrap .forumheaderlist .text-left .lastpost {
+      text-align: right; }
+    .type-18 .theme-table-wrap .forumheaderlist .text-left .replies {
+      text-align: center; }
+  .type-18 .theme-table-wrap .forumheaderlist .discussion:hover {
+    background: #ccc; }
+    .type-18 .theme-table-wrap .forumheaderlist .discussion .author .media .media-body {
+      padding-left: 10px; }
+  .type-18 .theme-table-wrap .forumheaderlist .discussion .module-link {
+    text-decoration: none !important;
+    color: #242424; }
+    .type-18 .theme-table-wrap .forumheaderlist .discussion .module-link:hover {
+      color: #a83332; }
+  .type-18 .module-bottom {
+    margin-top: 20px;
+    background: #f7f7f7;
+    padding: 10px 0;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.18); }
+    .type-18 .module-bottom .pull-left .module-link {
+      color: #242424;
+      font-size: 14px; }
+      .type-18 .module-bottom .pull-left .module-link:hover {
+        color: #a83332; }

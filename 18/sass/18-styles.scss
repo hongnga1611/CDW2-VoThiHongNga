@@ -1,0 +1,110 @@
+$color: #242424;
+$color_hover: #a83332;
+$font-size: 14px;
+%re-content {
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    display: -webkit-box;
+}
+
+@font-face {
+    font-family: "Roboto Slab";
+    src: url(../font/RobotoSlab-VariableFont_wght.ttf);
+}
+
+.module-link {
+    text-decoration: none !important;
+    @extend %re-content;
+}
+
+.type-18 {
+    color: #212529;
+    font-family: "Roboto Slab";
+    .menu {
+        background-color: #ebebeb;
+        .bread {
+            list-style-type: none;
+            .item-bread {
+                display: inline-block;
+                width: 120px;
+                height: 40px;
+                line-height: 40px;
+                .icons {
+                    font-size: 10px;
+                    color: $color;
+                }
+                .item {
+                    text-decoration: none;
+                    color: $color;
+                    font-style: normal;
+                    font-size: $font-size;
+                    line-height: 26px;
+                    &:hover {
+                        color: $color_hover;
+                    }
+                }
+            }
+        }
+    }
+    .title-page {
+        @extend %re-content;
+        margin-bottom: 0px;
+        font-weight: 500;
+        color: $color;
+        font-size: 37px;
+        line-height: 37px;
+    }
+    .content-page {
+        @extend %re-content;
+        padding: 40px 0;
+        color: #636363;
+    }
+    .theme-table-wrap {
+        color: #212529;
+        .forumheaderlist {
+            .text-left {
+                .lastpost {
+                    text-align: right;
+                }
+                .replies {
+                    text-align: center;
+                }
+            }
+            .discussion {
+                &:hover {
+                    background: #ccc;
+                }
+                .author {
+                    .media {
+                        .media-body {
+                            padding-left: 10px;
+                        }
+                    }
+                }
+                .module-link {
+                    text-decoration: none !important;
+                    color: $color;
+                    &:hover {
+                        color: $color_hover;
+                    }
+                }
+            }
+        }
+    }
+    .module-bottom {
+        margin-top: 20px;
+        background: #f7f7f7;
+        padding: 10px 0;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.18);
+        .pull-left {
+            .module-link {
+                color: $color;
+                font-size: $font-size;
+                &:hover {
+                    color: $color_hover;
+                }
+            }
+        }
+    }
+}

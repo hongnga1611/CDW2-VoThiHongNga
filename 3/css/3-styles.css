@@ -1,0 +1,69 @@
+@font-face {
+  font-family: "Roboto Slab";
+  src: url(../font/RobotoSlab-VariableFont_wght.ttf); }
+
+.type-3 {
+  background-color: #e5e5e5;
+  font-family: "Roboto Slab"; }
+  .type-3 .triangle {
+    position: relative;
+    padding: 20px 10px;
+    margin: 0 0 30px;
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 400;
+    box-sizing: border-box;
+    background: #c8c8b8;
+    box-shadow: 0px 3px 3px 0 rgba(0, 0, 0, 0.4); }
+  .type-3 .triangle::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin-left: -0.5em;
+    bottom: -2em;
+    left: 50%;
+    box-sizing: border-box;
+    border: 1em solid black;
+    border-color: transparent transparent #c8c8b8 #c8c8b8;
+    transform-origin: 0 0;
+    transform: rotate(-45deg);
+    box-shadow: -3px 3px 3px 0 rgba(0, 0, 0, 0.4); }
+    .type-3 .infor-icon .icon-description {
+      border-bottom: 2px solid #a83332;
+      width: 150px;
+      margin: 0 auto 20px auto;
+      height: 93px;
+      overflow: hidden; }
+      .type-3 .infor-icon .icon-description .icon-name {
+        transition: all 0.3s ease;
+        font-size: 3em;
+        margin: 0 auto;
+        left: 18%;
+        padding: 26px 21px;
+        background-color: whitesmoke;
+        border: 5px solid #c8c8b8;
+        border-radius: 50%;
+        bottom: -44px;
+        color: #a83332; }
+    .type-3 .infor-icon:hover .icon-name {
+      transition: all 0.5s ease;
+      background-color: #a83332;
+      color: white;
+      bottom: -20px; }
+    .type-3 .infor-icon .title {
+      font-size: 19px;
+      text-decoration: none;
+      color: black; }
+      .type-3 .infor-icon .title:hover {
+        color: #a83332; }
+    .type-3 .infor-icon .content-icon {
+      font-weight: 100;
+      text-align: center;
+      line-height: 26px;
+      opacity: 0.9;
+      color: #636363;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      display: -webkit-box; }
